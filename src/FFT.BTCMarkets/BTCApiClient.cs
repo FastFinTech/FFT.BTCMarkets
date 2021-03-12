@@ -87,6 +87,8 @@ namespace FFT.BTCMarkets
 
     private async Task<T> ParseResponse<T>(HttpResponseMessage response)
     {
+      var json = await response.Content.ReadAsStringAsync();
+
       await RequestFailedException.ThrowIfNecessary(response);
       return (await response.Content.ReadFromJsonAsync<T>(SerializationOptions.Instance, DisposedToken))!;
     }
@@ -276,6 +278,7 @@ namespace FFT.BTCMarkets
 
       try
       {
+        await _signalEvent.WaitAsync(DisposedToken);
         await ws.ConnectAsync(new Uri("wss://socket.btcmarkets.net/v2"), DisposedToken);
         var readTask = ReadMessage(ws, buffer, DisposedToken);
 

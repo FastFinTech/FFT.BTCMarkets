@@ -20,7 +20,7 @@ namespace FFT.BTCMarkets
       return new StreamInfo
       {
         Symbol = symbol,
-        Channel = "orderBookUpdate",
+        Channel = "orderbookUpdate",
         Type = StreamType.OrderBookUpdate,
       };
     }

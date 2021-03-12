@@ -20,35 +20,33 @@ namespace FFT.BTCMarkets.Tests
   using Microsoft.VisualStudio.TestTools.UnitTesting;
   using static System.Math;
   using static System.MidpointRounding;
-  //using static FFT.BTCMarkets.Tests.Services;
 
   [TestClass]
-  public class ConnectivityTests
+  public class BasicTests
   {
-    //[TestMethod]
-    //public async Task Connectivity()
-    //{
-    //  await Client.TestConnectivity();
-    //  var time = await Client.GetServerTime();
-    //  var orderBooks = await Client.GetTopOrderBooks();
-    //  var btcOrderBooks = orderBooks.Where(b => b.Symbol.StartsWith("BTC")).ToList();
-    //  var btcUSDOrderBook = orderBooks.Single(b => b.Symbol == "BTCUSDT");
-    //  var btcBidDollars = Round(btcUSDOrderBook.BidQty * btcUSDOrderBook.BidPrice, 2, AwayFromZero);
-    //  var btcAskDollars = Round(btcUSDOrderBook.AskQty * btcUSDOrderBook.AskPrice, 2, AwayFromZero);
-    //}
+    [TestMethod]
+    public async Task ClientBasics()
+    {
+      var client = Services.Client;
+      var availableMarkets = await client.GetActiveMarkets();
+      var btcAud = availableMarkets.Single(m => m.MarketId == "BTC-AUD");
 
-    //[TestMethod]
-    //public async Task DepthStream()
-    //{
-    //  var count = 0;
-    //  using var cts = new CancellationTokenSource(10000);
-    //  var subscription = await Client.Subscribe(StreamInfo.FullDepth("BTCUSDT", false));
-    //  await foreach (var book in subscription.Reader.ReadAllAsync(cts.Token))
-    //  {
-    //    if (++count == 2)
-    //      return;
-    //  }
-    //}
+      var btcBook = await client.GetOrderBook("BTC-AUD");
+
+      await using var subscription = await client.Subscribe(StreamInfo.OrderBookUpdate("BTC-AUD"));
+      _ = Task.Run(async () =>
+      {
+        await Task.Delay(2000);
+        await subscription.DisposeAsync();
+      });
+      var messageCount = 0;
+      await foreach (Book book in subscription.Reader.ReadAllAsync())
+      {
+        messageCount++;
+      }
+
+      Assert.IsTrue(messageCount > 10);
+    }
 
     [TestMethod]
     public async Task SimpleTest()

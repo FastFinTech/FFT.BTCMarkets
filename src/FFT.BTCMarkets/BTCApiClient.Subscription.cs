@@ -38,7 +38,8 @@ namespace FFT.BTCMarkets
 
       protected override ValueTask CustomDisposeAsync()
       {
-        _channel.Writer.TryComplete(DisposalReason);
+        //_channel.Writer.TryComplete(DisposalReason);
+        _channel.Writer.TryComplete();
         _connection.Remove(this);
         return default;
       }

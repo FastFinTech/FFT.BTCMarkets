@@ -22,7 +22,7 @@ namespace FFT.BTCMarkets
 
       public override ValueTask Handle(ReadOnlyMemory<byte> data)
       {
-        var update = JsonSerializer.Deserialize<MessageEnvelope<BookUpdate>>(data.Span, SerializationOptions.Instance).Data!;
+        var update = JsonSerializer.Deserialize<BookUpdate>(data.Span, SerializationOptions.Instance);
         if (update.Snapshot)
         {
           _book = Book.FromSnapshot(ref update);

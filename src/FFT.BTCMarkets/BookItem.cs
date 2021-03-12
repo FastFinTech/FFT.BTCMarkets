@@ -32,9 +32,12 @@ namespace FFT.BTCMarkets
         var qty = decimal.Parse(reader.GetString()!, NumberStyles.Any, CultureInfo.InvariantCulture);
         reader.Read();
 
-        if (reader.TokenType != JsonTokenType.Number) throw new JsonException();
-        var count = reader.GetInt32();
-        reader.Read();
+        var count = 0;
+        if (reader.TokenType == JsonTokenType.Number)
+        {
+          count = reader.GetInt32();
+          reader.Read();
+        }
 
         if (reader.TokenType != JsonTokenType.EndArray) throw new JsonException();
         return new BookItem
