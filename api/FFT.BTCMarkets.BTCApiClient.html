@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BTCApiClient
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BTCApiClient
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/vs.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script> 
+    <style>    
+      .hljs { white-space: pre; overflow-x: auto; }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="FFT.BTCMarkets.BTCApiClient">
+  
+  
+  <h1 id="FFT_BTCMarkets_BTCApiClient" data-uid="FFT.BTCMarkets.BTCApiClient" class="text-break">Class BTCApiClient
+  </h1>
+  <div class="markdown level0 summary"><p>Provides access to Binance market data. This is a single-use object. It
+disposes itself when the connection drops.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BTCApiClient</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IAsyncDisposable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FFT.BTCMarkets.html">FFT.BTCMarkets</a></h6>
+  <h6><strong>Assembly</strong>: FFT.BTCMarkets.dll</h6>
+  <h5 id="FFT_BTCMarkets_BTCApiClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class BTCApiClient : AsyncDisposeBase, IAsyncDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient__ctor_System_Nullable_BTCApiClientOptions__.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.%23ctor(System.Nullable%7BBTCApiClientOptions%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L49">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient__ctor_" data-uid="FFT.BTCMarkets.BTCApiClient.#ctor*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient__ctor_System_Nullable_BTCApiClientOptions__" data-uid="FFT.BTCMarkets.BTCApiClient.#ctor(System.Nullable{BTCApiClientOptions})">BTCApiClient(Nullable&lt;BTCApiClientOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="FFT.BTCMarkets.BTCApiClient.html">BTCApiClient</a>
+class and triggers immediate connection to the streaming websocket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BTCApiClient(BTCApiClientOptions? options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">BTCApiClientOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Configures the client, particularly for
+authentication. Can be left <code>null</code> if you are only accessing
+functions that do not require authentication.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_Options.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L86">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_Options_" data-uid="FFT.BTCMarkets.BTCApiClient.Options*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_Options" data-uid="FFT.BTCMarkets.BTCApiClient.Options">Options</h4>
+  <div class="markdown level1 summary"><p>Configures this <a class="xref" href="FFT.BTCMarkets.BTCApiClient.html">BTCApiClient</a> instance. May be
+<code>null</code> if this instance is not intended for use with functions that
+require authentication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BTCApiClientOptions? Options { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">BTCApiClientOptions</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_CustomDisposeAsync.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.CustomDisposeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L71">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_CustomDisposeAsync_" data-uid="FFT.BTCMarkets.BTCApiClient.CustomDisposeAsync*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_CustomDisposeAsync" data-uid="FFT.BTCMarkets.BTCApiClient.CustomDisposeAsync">CustomDisposeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ValueTask CustomDisposeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ValueTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_GetActiveMarkets.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.GetActiveMarkets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L131">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_GetActiveMarkets_" data-uid="FFT.BTCMarkets.BTCApiClient.GetActiveMarkets*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_GetActiveMarkets" data-uid="FFT.BTCMarkets.BTCApiClient.GetActiveMarkets">GetActiveMarkets()</h4>
+  <div class="markdown level1 summary"><p>Retrieves list of active markets including configuration for each
+market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;ActiveMarket&gt;&gt; GetActiveMarkets()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">ActiveMarket</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_GetOrderBook_System_String_.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.GetOrderBook(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L171">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_GetOrderBook_" data-uid="FFT.BTCMarkets.BTCApiClient.GetOrderBook*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_GetOrderBook_System_String_" data-uid="FFT.BTCMarkets.BTCApiClient.GetOrderBook(System.String)">GetOrderBook(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Book&gt; GetOrderBook(string marketId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">marketId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Book</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_GetServerTime.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.GetServerTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L120">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_GetServerTime_" data-uid="FFT.BTCMarkets.BTCApiClient.GetServerTime*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_GetServerTime" data-uid="FFT.BTCMarkets.BTCApiClient.GetServerTime">GetServerTime()</h4>
+  <div class="markdown level1 summary"><p>Gets the current time on the BTC Markets api server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerTime&gt; GetServerTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ServerTime</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_GetTicker_System_String_.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.GetTicker(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L141">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_GetTicker_" data-uid="FFT.BTCMarkets.BTCApiClient.GetTicker*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_GetTicker_System_String_" data-uid="FFT.BTCMarkets.BTCApiClient.GetTicker(System.String)">GetTicker(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves ticker for the given marketId.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Ticker&gt; GetTicker(string marketId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">marketId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Ticker</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_GetTickers_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.GetTickers(IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L158">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_GetTickers_" data-uid="FFT.BTCMarkets.BTCApiClient.GetTickers*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_GetTickers_IEnumerable_System_String__" data-uid="FFT.BTCMarkets.BTCApiClient.GetTickers(IEnumerable{System.String})">GetTickers(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves tickers for the given marketIds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Ticker&gt;&gt; GetTickers(IEnumerable&lt;string&gt; marketIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">marketIds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">Ticker</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_GetTickers_System_String___.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.GetTickers(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L152">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_GetTickers_" data-uid="FFT.BTCMarkets.BTCApiClient.GetTickers*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_GetTickers_System_String___" data-uid="FFT.BTCMarkets.BTCApiClient.GetTickers(System.String[])">GetTickers(String[])</h4>
+  <div class="markdown level1 summary"><p>Retrieves tickers for the given marketIds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Ticker&gt;&gt; GetTickers(params string[] marketIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">marketIds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">Ticker</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient_Subscribe_StreamInfo_.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient.Subscribe(StreamInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.cs/#L203">View Source</a>
+  </span>
+  <a id="FFT_BTCMarkets_BTCApiClient_Subscribe_" data-uid="FFT.BTCMarkets.BTCApiClient.Subscribe*"></a>
+  <h4 id="FFT_BTCMarkets_BTCApiClient_Subscribe_StreamInfo_" data-uid="FFT.BTCMarkets.BTCApiClient.Subscribe(StreamInfo)">Subscribe(StreamInfo)</h4>
+  <div class="markdown level1 summary"><p>Gets a subscription to the given <code data-dev-comment-type="paramref" class="paramref">streamInfo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;ISubscription&gt; Subscribe(StreamInfo streamInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">StreamInfo</span></td>
+        <td><span class="parametername">streamInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ValueTask</span>&lt;<a class="xref" href="FFT.BTCMarkets.ISubscription.html">ISubscription</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IAsyncDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/new/main/apiSpec/new?filename=FFT_BTCMarkets_BTCApiClient.md&amp;value=---%0Auid%3A%20FFT.BTCMarkets.BTCApiClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/FastFinTech/FFT.BTCMarkets/blob/main/src/FFT.BTCMarkets/BTCApiClient.Subscription.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script src="//unpkg.com/highlightjs-dotnetconfig@0.9.1/dist/dotnetconfig.min.js"></script>
+  </body>
+</html>
