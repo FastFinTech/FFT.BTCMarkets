@@ -5,7 +5,7 @@
     <IsPackable>true</IsPackable>
     <!--<GenerateDocumentationFile>true</GenerateDocumentationFile>-->
 
-    <PackageId>FFT.Binance</PackageId>
+    <PackageId>FFT.BTCMarkets</PackageId>
     <Summary>A .net client for the Binance api.</Summary>
     <Description>$(Summary)</Description>
     <Company>True Goodwill</Company>
